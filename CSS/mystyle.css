@@ -1,0 +1,29 @@
+@charset "utf-8";
+/* CSS Document */
+
+.background01 {
+	position: relative;
+	left: 25%;
+	height: 100%;
+	mix-blend-mode: multiply;
+	z-index: 1;
+}
+.background10 {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	mix-blend-mode: multiply;
+	z-index: 2;
+}
+
+
+.rotateright {
+	top: 30%;
+	width: 50%;
+	position: absolute;
+	z-index: 3;
+	text-align: center;
+}
+.rotateright img {
+	position: absolute;
+}
