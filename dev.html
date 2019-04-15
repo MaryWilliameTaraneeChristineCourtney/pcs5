@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
+    <title>Happy 31st BirthDay, You Dirty One!</title>
+    <style>
+    
+    body {
+        margin: 0 auto;
+        background: black !important;
+        color: white;
+        width: 100%;
+        height: 100vh;
+        overflow: hidden;
+    }
+
+    .pcs-image {
+        display: block;
+        max-width:700px;
+        width: 100%;
+        margin-top: 10px;
+        transform: rotate(3deg);
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .pcs-stain1 {
+        background: url("Images/Stain00.png") no-repeat;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 10px 10px black inset;
+    }
+
+    .pcs-stain2 {
+        background: url("Images/Stain00.png") no-repeat;
+        display: block;
+        width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+        box-shadow: 0 0 10px 10px black inset; 
+    }
+    </style>
+    <link rel="stylesheet" type="text/css" href="Slick/slick.css"/>
+    <link rel="stylesheet" type="text/css" href="Slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    </head>
+</head>
+<body>
+    <div class="pcs-slider">
+        <div>
+            <div data-toggle="tooltip" data-placement="bottom" title="Mattfrie1's message." class="pcs-stain1"><img class="pcs-image" alt="Mattfrie1's Message." src="Images\Napkins\015 (Mattfrie1).png"></div>
+        </div>
+        <div>
+                <div data-toggle="tooltip" data-placement="bottom" title="_____named's message." class="pcs-stain2"><img class="pcs-image" src="Images\Napkins\018 (_____named).png"></div>
+        </div>
+      </div>
+</body>
+<script src="/Slick/slick.js"></script>
+<script>
+$('.pcs-slider').slick();
+</script>
+<script>
+        $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip(); 
+        });
+        </script>
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</html>
