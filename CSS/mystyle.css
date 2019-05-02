@@ -32,28 +32,72 @@
 	float: left;
 	transform: rotate(-5deg);
 	height: 66%;
-	z-index: 3;
+	z-index: 6;
 }
 .napkins2 {
 	position: absolute;
 	float: left;
 	transform: rotate(5deg);
 	height: 66%;
-	z-index: 3;
+	z-index: 6;
 }
-.pos2 {
+.pos01 {
 	top: 10%;
-	left: 15.5%;
+	left: 9%;
 }
-.pos3 {
+.pos02 {
 	top: 10%;
-	left: 20%;
+	left: 13.5%;
 }
-.pos4 {
+.pos03 {
 	top: 10%;
-	left: 28%;
+	left: 21.5%;
 }
-.pos5 {
+.pos04 {
 	top: 10%;
-	left: 32%;
+	left: 26%;
+}
+.pos05 {
+	top: 10%;
+	left: 34%;
+}
+.pos06 {
+	top: 10%;
+	left: 38.5%;
+}
+.pos07 {
+	top: 10%;
+	left: 46.5%;
+}
+.pos08 {
+	top: 10%;
+	left: 51%;
+}
+.pos09 {
+	top: 10%;
+	left: 59%;
+}
+.pos10 {
+	top: 10%;
+	left: 63.5%;
+}
+.pos11 {
+	top: 10%;
+	left: 71.5%;
+}
+.pos12 {
+	top: 10%;
+	left: 76%;
+}
+.pos13 {
+	top: 10%;
+	left: 84%;
+}
+.pos14 {
+	top: 10%;
+	left: 88.5%;
+}
+.pos15 {
+	top: 10%;
+	left: 96.5%;
 }
