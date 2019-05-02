@@ -1,29 +1,55 @@
 @charset "utf-8";
 /* CSS Document */
 
+.slide {
+	margin: 0;
+	padding: 0;
+}
+
 .background01 {
-	position: relative;
-	left: 25%;
+	position: absolute;
+	float: left;
+	top: 0;
 	height: 100%;
 	mix-blend-mode: multiply;
 	z-index: 1;
+	text-align: center;
+	margin-left: .5%;
 }
 .background10 {
 	position: absolute;
+	float: left;
 	top: 0;
 	height: 100%;
 	mix-blend-mode: multiply;
 	z-index: 2;
-}
-
-
-.rotateright {
-	top: 30%;
-	width: 50%;
-	position: absolute;
-	z-index: 3;
 	text-align: center;
+	margin-left: .5%;
 }
-.rotateright img {
+
+.napkins1 {
 	position: absolute;
+	float: left;
+	transform: rotate(-5deg);
+	height: 66%;
+	z-index: 3;
+}
+.napkins2 {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 66%;
+	z-index: 3;
+}
+.pos2 {
+	top: 10%;
+	left: 15%;
+}
+.pos3 {
+	top: 10%;
+	left: 20%;
+}
+.pos5 {
+	top: 10%;
+	left: 33.5%;
 }
