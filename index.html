@@ -11,23 +11,62 @@
 <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
 
-<script>
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-			//options here
-			autoScrolling:true,
-			scrollOverflow:true,
-			css3: true
-		});
-	});
-</script>
-<!--<script>
-	$('.background').parallax({
-		imageSrc: '/Images/CoffeeBackGround.jpg',
-		naturalWidth: 7680,
-		naturalHeight: 2160
-	});
-</script>-->
+		<script>
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					//options here
+					autoScrolling:true,
+					scrollOverflow:true,
+					css3: true
+				});
+			});
+		</script>
+		<script>
+			// loads the audio player
+			audioPlayer();
+		</script>
+		<script>
+			//This plays a file, and call a callback once it completed (if a callback is set)
+
+			function play(audio, callback) {
+				audio.play();
+				if (callback) {
+				//When the audio object completes its playback, call the callback
+				//provided      
+					audio.addEventListener('ended', callback);
+				}
+				audio.volume = 0.1;
+				
+			}
+
+			//Changed the name to better reflect the functionality
+			function play_sound_queue(sounds) {
+				var index = 0;
+				function recursive_play() {
+				//If the index is the last of the table, play the sound
+				//without running a callback after       
+					if (index + 1 === sounds.length) {
+						play(sounds[index], null);
+					} else {
+					  //Else, play the sound, and when the playing is complete
+					  //increment index by one and play the sound in the 
+					  //indexth position of the array
+							play(sounds[index], function() {
+								index++;
+								recursive_play();
+							});
+						}
+					}
+
+			  //Call the recursive_play for the first time
+				recursive_play();
+			}
+
+			function play_all() {
+				play_sound_queue([new Audio("Audio/Music/Fibbage3Lobby(Instrumental).mp3"), new Audio("Audio/Music/Menina.mp3"), new Audio("Audio/Music/CoffeeShop(Instrumental).mp3")]);
+			}
+			
+		</script>
 
 </head>
 
