@@ -5,6 +5,38 @@
 	margin: 0;
 	padding: 0;
 }
+.background00 {
+	position: absolute;
+	float: left;
+	top: 0;
+	width: 100%;
+	mix-blend-mode: multiply;
+	z-index: 1;
+	text-align: center;
+	margin-left: 0;
+}
+.napkins0 {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 75%;
+	z-index: 6;
+}
+.pos00 {
+	top: 10%;
+	left: 12.5%;
+}
+.pics0 {
+	position: absolute;
+	float: left;
+	transform: rotate(-5deg);
+	height: 50%;
+	z-index: 3;
+}
+.pic00 {
+	top: 25%;
+	left: 60%;
+}
 
 .background01 {
 	position: absolute;
@@ -26,6 +58,8 @@
 	text-align: center;
 	margin-left: .5%;
 }
+
+
 
 .napkins1 {
 	position: absolute;

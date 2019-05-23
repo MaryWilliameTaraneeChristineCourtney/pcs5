@@ -35,7 +35,7 @@
 				//provided      
 					audio.addEventListener('ended', callback);
 				}
-				audio.volume = 0.1;
+				audio.volume = 0.2;
 				
 			}
 
@@ -63,7 +63,7 @@
 			}
 
 			function play_all() {
-				play_sound_queue([new Audio("Audio/Music/Fibbage3Lobby(Instrumental).mp3"), new Audio("Audio/Music/Menina.mp3"), new Audio("Audio/Music/CoffeeShop(Instrumental).mp3")]);
+				play_sound_queue([new Audio("Audio/Music/Fibbage3Lobby(Instrumental).mp3"), new Audio("Audio/Music/Menina.mp3"), new Audio("Audio/Music/CoffeeShop(Instrumental).mp3"), new Audio("Audio/Music/PoisonArrow(USJazzRemixInstrumental).mp3")]);
 			}
 			
 		</script>
@@ -82,7 +82,11 @@
 
 <body>
 	<div id="fullpage">
-		<div class="section" onload="play_all();">Some section</div>
+		<div class="section">
+			<img class="background00" src="Images/Stain00.png" /> 
+			<img class="napkins0 pos00" src="Images/Napkins/000.png" />
+			<img class="pics0 pic00" src="Images/Polaroids/000 (cs188).png" onclick="play_all();" />
+		</div>
 		<div class="section">
 			<div class="slide"> Slide 1 </div>
 			<div class="slide"> <img class="background01" src="Images/Stain01.png" /> 
