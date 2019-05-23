@@ -37,6 +37,71 @@
 	top: 25%;
 	left: 60%;
 }
+.latte {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 50%;
+	z-index: 7;
+	top: 50%;
+	left: 2.5%;
+}
+.steam {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 50%;
+	z-index: 8;
+	top: 50%;
+	left: 2.5%;
+	mix-blend-mode: screen;
+}
+
+
+@-webkit-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@-moz-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@-ms-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@-o-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
 
 .background01 {
 	position: absolute;
