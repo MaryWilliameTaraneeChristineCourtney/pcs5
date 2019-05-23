@@ -13,14 +13,14 @@
 	mix-blend-mode: multiply;
 	z-index: 1;
 	text-align: center;
-	margin-left: 0;
+	margin-left: 2;
 }
 .napkins0 {
 	position: absolute;
 	float: left;
 	transform: rotate(5deg);
 	height: 75%;
-	z-index: 6;
+	z-index: 7;
 }
 .pos00 {
 	top: 10%;
@@ -31,7 +31,7 @@
 	float: left;
 	transform: rotate(-5deg);
 	height: 50%;
-	z-index: 3;
+	z-index: 4;
 }
 .pic00 {
 	top: 25%;
@@ -42,7 +42,7 @@
 	float: left;
 	transform: rotate(5deg);
 	height: 50%;
-	z-index: 7;
+	z-index: 8;
 	top: 50%;
 	left: 2.5%;
 }
@@ -57,6 +57,16 @@
 	mix-blend-mode: screen;
 }
 
+.sectionvid {
+	position: absolute;
+	float: left;
+	bottom: 0;
+	width: 100%;
+	left: 0;
+	position: absolute;
+	float: left;
+	z-index: 1;
+}
 
 @-webkit-keyframes steam {
 0% { top: 100px; opacity: .075; visibility: visible; }
@@ -109,7 +119,7 @@
 	top: 0;
 	height: 100%;
 	mix-blend-mode: multiply;
-	z-index: 1;
+	z-index: 2;
 	text-align: center;
 	margin-left: .5%;
 }
@@ -119,7 +129,7 @@
 	top: 0;
 	height: 100%;
 	mix-blend-mode: multiply;
-	z-index: 2;
+	z-index: 3;
 	text-align: center;
 	margin-left: .5%;
 }
@@ -131,14 +141,14 @@
 	float: left;
 	transform: rotate(-5deg);
 	height: 66%;
-	z-index: 6;
+	z-index: 7;
 }
 .napkins2 {
 	position: absolute;
 	float: left;
 	transform: rotate(5deg);
 	height: 66%;
-	z-index: 6;
+	z-index: 7;
 }
 .pos01 {
 	top: 10%;
@@ -207,14 +217,14 @@
 	float: left;
 	transform: rotate(5deg);
 	height: 50%;
-	z-index: 3;
+	z-index: 4;
 }
 .pics2 {
 	position: absolute;
 	float: left;
 	transform: rotate(-5deg);
 	height: 50%;
-	z-index: 3;
+	z-index: 4;
 }
 .pic01 {
 	top: 20%;
