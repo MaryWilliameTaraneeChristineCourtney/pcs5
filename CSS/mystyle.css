@@ -5,6 +5,103 @@
 	margin: 0;
 	padding: 0;
 }
+.background00 {
+	position: absolute;
+	float: left;
+	top: 0;
+	width: 100%;
+	mix-blend-mode: multiply;
+	z-index: 1;
+	text-align: center;
+	margin-left: 0;
+}
+.napkins0 {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 75%;
+	z-index: 6;
+}
+.pos00 {
+	top: 10%;
+	left: 12.5%;
+}
+.pics0 {
+	position: absolute;
+	float: left;
+	transform: rotate(-5deg);
+	height: 50%;
+	z-index: 3;
+}
+.pic00 {
+	top: 25%;
+	left: 60%;
+}
+.latte {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 50%;
+	z-index: 7;
+	top: 50%;
+	left: 2.5%;
+}
+.steam {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 50%;
+	z-index: 8;
+	top: 50%;
+	left: 2.5%;
+	mix-blend-mode: screen;
+}
+
+
+@-webkit-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@-moz-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@-ms-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@-o-keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
+
+@keyframes steam {
+0% { top: 100px; opacity: .075; visibility: visible; }
+20% { top: 80px; opacity: 0.2; }
+40% { top: 60px; opacity: 0.4; }
+60% { top: 40px; opacity: 0.2; }
+80% { top: 20px; opacity: .075; }
+100% { top: 0px; opacity: 0; visibility: hidden; }
+}
 
 .background01 {
 	position: absolute;
@@ -26,6 +123,8 @@
 	text-align: center;
 	margin-left: .5%;
 }
+
+
 
 .napkins1 {
 	position: absolute;
@@ -100,4 +199,101 @@
 .pos15 {
 	top: 10%;
 	left: 96.5%;
+}
+
+
+.pics1 {
+	position: absolute;
+	float: left;
+	transform: rotate(5deg);
+	height: 50%;
+	z-index: 3;
+}
+.pics2 {
+	position: absolute;
+	float: left;
+	transform: rotate(-5deg);
+	height: 50%;
+	z-index: 3;
+}
+.pic01 {
+	top: 20%;
+	left: 7.5%;
+}
+.pic02 {
+	top: 20%;
+	left: 16.5%;
+}
+.pic03 {
+	top: 20%;
+	left: 20%;
+}
+.pic04 {
+	top: 20%;
+	left: 29%;
+}
+.pic05 {
+	top: 20%;
+	left: 32.5%;
+}
+.pic06 {
+	top: 20%;
+	left: 41.5%;
+}
+.pic07 {
+	top: 20%;
+	left: 45%;
+}
+.pic08 {
+	top: 20%;
+	left: 54%;
+}
+.pic09 {
+	top: 20%;
+	left: 57.5%;
+}
+.pic10 {
+	top: 20%;
+	left: 66.5%;
+}
+.pic11 {
+	top: 20%;
+	left: 70%;
+}
+.pic12 {
+	top: 20%;
+	left: 79%;
+}
+.pic13 {
+	top: 20%;
+	left: 82.5%;
+}
+.pic14 {
+	top: 20%;
+	left: 91.5%;
+}
+.pic15 {
+	top: 20%;
+	left: 95%;
+}
+
+.vid01 {
+	top: 20%;
+	left: 7%;
+}
+.vid02 {
+	top: 20%;
+	left: 16%;
+}
+.vid03 {
+	top: 20%;
+	left: 19.5%;
+}
+.vid06 {
+	top: 20%;
+	left: 41%;
+}
+.vid15 {
+	top: 20%;
+	left: 94.5%;
 }

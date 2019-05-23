@@ -11,93 +11,180 @@
 <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/3.0.4/fullpage.js"></script>
 
-<script>
-	$(document).ready(function() {
-		$('#fullpage').fullpage({
-			//options here
-			autoScrolling:true,
-			scrollOverflow:true,
-			css3: true
-		});
-	});
-</script>
-<!--<script>
-	$('.background').parallax({
-		imageSrc: '/Images/CoffeeBackGround.jpg',
-		naturalWidth: 7680,
-		naturalHeight: 2160
-	});
-</script>-->
+		<script>
+			$(document).ready(function() {
+				$('#fullpage').fullpage({
+					//options here
+					autoScrolling:true,
+					scrollOverflow:true,
+					css3: true
+				});
+			});
+		</script>
+		<script>
+			// loads the audio player
+			audioPlayer();
+		</script>
+		<script>
+			//This plays a file, and call a callback once it completed (if a callback is set)
 
+			function play(audio, callback) {
+				audio.play();
+				if (callback) {
+				//When the audio object completes its playback, call the callback
+				//provided      
+					audio.addEventListener('ended', callback);
+				}
+				audio.volume = 0.2;
+				
+			}
+
+			//Changed the name to better reflect the functionality
+			function play_sound_queue(sounds) {
+				var index = 0;
+				function recursive_play() {
+				//If the index is the last of the table, play the sound
+				//without running a callback after       
+					if (index + 1 === sounds.length) {
+						play(sounds[index], null);
+					} else {
+					  //Else, play the sound, and when the playing is complete
+					  //increment index by one and play the sound in the 
+					  //indexth position of the array
+							play(sounds[index], function() {
+								index++;
+								recursive_play();
+							});
+						}
+					}
+
+			  //Call the recursive_play for the first time
+				recursive_play();
+			}
+
+			function play_all() {
+				play_sound_queue([new Audio("Audio/Music/Fibbage3Lobby(Instrumental).mp3"), new Audio("Audio/Music/Menina.mp3"), new Audio("Audio/Music/CoffeeShop(Instrumental).mp3"), new Audio("Audio/Music/PoisonArrow(USJazzRemixInstrumental).mp3")]);
+			}
+			
+		</script>
+		<script>
+			$(document).ready(function () {
+				$(".thumbnail").hover(function () {
+					$(this).children("video")[0].play();
+				}, function () {
+					var el = $(this).children("video")[0];
+					el.pause();
+					el.currentTime = 0;
+				});
+			});
+		</script>
 </head>
 
 <body>
 	<div id="fullpage">
-		<div class="section">Some section</div>
+		<div class="section">
+			<img class="background00" src="Images/Stain00.png" /> 
+			<img class="napkins0 pos00" src="Images/Napkins/000.png" />
+			<img class="pics0 pic00" src="Images/Polaroids/000 (cs188).png" onclick="play_all();" />
+			<img class="latte" src="Images/Latte.png" />
+			<img class="steam" src="Images/dirt.gif" />
+		</div>
 		<div class="section">
 			<div class="slide"> Slide 1 </div>
 			<div class="slide"> <img class="background01" src="Images/Stain01.png" /> 
+				<img class="pics1 pic01" src="Images/Polaroids/001 (ItsNovaHere).png" />
 				<img class="napkins1 pos01" src="Images/Napkins/001 (ItsNovaHere).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain02.png" />
+				<img class="pics2 pic02" src="Images/Polaroids/002 (Oktayey).png" />
 				<img class="napkins2 pos02" src="Images/Napkins/002 (Oktayey).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain03.png" />
+				<img class="pics1 pic03" src="Images/Polaroids/001 (ItsNovaHere).png" />
 				<img class="napkins1 pos03" src="Images/Napkins/003 (KmartKart).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain04.png" />
+				<img class="pics2 pic04" src="Images/Polaroids/004 (Nsaneone).png" />
 				<img class="napkins2 pos04" src="Images/Napkins/004 (Nsaneone).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain05.png" />
+				<img class="pics1 pic05" src="Images/Polaroids/005 (987computer).png" />
 				<img class="napkins1 pos05" src="Images/Napkins/005 (987computer).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain06.png" /> 
+				<img class="pics2 pic06" src="Images/Polaroids/006 (1sam234).png" />
 				<img class="napkins2 pos06" src="Images/Napkins/006 (1sam234).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain07.png" /> 
+				<img class="pics1 pic07" src="Images/Polaroids/007 (db05).png" />
 				<img class="napkins1 pos07" src="Images/Napkins/007 (db05).png" />
 			</div>
-			<div class="slide"> <img class="background01" src="Images/Stain08.png" /> 
+			<div class="slide"> <img class="background01" src="Images/Stain08.png" />
+				<img class="pics2 pic08" src="Images/Polaroids/008 (Zanatu).png" />
 				<img class="napkins2 pos08" src="Images/Napkins/008 (Zanatu).png" />
 			</div>
 			<div class="slide"> <img class="background01" src="Images/Stain09.png" /> 
+				<img class="pics1 pic09" src="Images/Polaroids/005 (987computer).png" />
 				<img class="napkins1 pos09" src="Images/Napkins/009 (426maxwedgie).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /> 
+				<img class="pics2 pic10" src="Images/Polaroids/010 (Wargreymon).png" />
 				<img class="napkins2 pos10" src="Images/Napkins/010 (Wargreymon115).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain01.png" /> 
+				<img class="pics1 pic11" src="Images/Polaroids/011 (crashmatilda).png" />
 				<img class="napkins1 pos11" src="Images/Napkins/011 (crashmatilda).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain02.png" /> 
+				<img class="pics2 pic12" src="Images/Polaroids/012 (Dimick).png" />
 				<img class="napkins2 pos12" src="Images/Napkins/012 (Dimick).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain03.png" /> 
+				<img alt="I said something." class="pics1 pic13" src="Images/Polaroids/013 (loopholeagain).png" onmouseover="document.getElementById('play013').play()" />
 				<img class="napkins1 pos13" src="Images/Napkins/013 (loopholesagain).png" />
+				<audio id="play013" preload="auto">
+					<source src="Audio/Recordings/013 (loopholesagain).mp3" />
+				</audio>
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain04.png" /> 
+				<img alt="I said something." class="pics2 pic14" src="Images/Polaroids/014 (nespc).png" onmouseover="document.getElementById('play014').play()" />
 				<img class="napkins2 pos14" src="Images/Napkins/014 (nespc).png" />
+				<audio id="play014" preload="auto">
+					<source src="Audio/Recordings/014 (nespc).mp3" />
+				</audio>
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain05.png" /> 
+				<img class="pics1 pic15" src="Images/Polaroids/005 (987computer).png" />
 				<img class="napkins1 pos15" src="Images/Napkins/015 (Mattfrie1).png" />
 			</div>
 		</div>
 		<div class="section">
 			<div class="slide"> Slide 1 </div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain06.png" /> 
+				<img class="pics2 pic01" src="Images/Polaroids/016 (AWK8923).png" />
 				<img class="napkins2 pos01" src="Images/Napkins/016 (AWK8923).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain07.png" /> 
+				<img class="pics1 pic02" src="Images/Polaroids/016 (AWK8923).png" />
 				<img class="napkins1 pos02" src="Images/Napkins/017 (Duke).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain08.png" /> 
+				<img alt="I said something." class="pics2 pic03" src="Images/Polaroids/018 (_____named).png" onmouseover="document.getElementById('play018').play()" />
 				<img class="napkins2 pos03" src="Images/Napkins/018 (_____named).png" />
+				<audio id="play018" preload="auto">
+					<source src="Audio/Recordings/018 (_____named).mp3" />
+				</audio>
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain10.png" /><img class="background01" src="Images/Stain09.png" /> 
+				<img class="pics1 pic04" src="Images/Polaroids/019 (DeeDeeMarie).png" />
 				<img class="napkins1 pos04" src="Images/Napkins/019 (DeeDeeMarie).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain20.png" />
+				<img alt="I said something." class="pics2 pic05" src="Images/Polaroids/020 (KimmieSasumori).png" onmouseover="document.getElementById('play020').play()" />
 				<img class="napkins2 pos05" src="Images/Napkins/020 (Kimmie Sasumori).png" />
+				<audio id="play020" preload="auto">
+					<source src="Audio/Recordings/020 (Kimmie Sasumori).mp3" />
+				</audio>
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain20.png" /><img class="background01" src="Images/Stain01.png" /> 
 				<img class="napkins1 pos06" src="Images/Napkins/021 (Fuzy2K).png" />
@@ -136,9 +223,15 @@
 				<img class="napkins1 pos01" src="Images/Napkins/031 (ACPixel).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain30.png" /><img class="background01" src="Images/Stain02.png" />
+				<video class="pics2 vid02" preload="auto">
+					<source src="Video/032 (DigiDuncan).webm" type="video/webm">
+				</video>
 				<img class="napkins2 pos02" src="Images/Napkins/032 (DigiDuncan).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain30.png" /><img class="background01" src="Images/Stain03.png" />
+				<video class="pics1 vid03" preload="auto">
+					<source src="Video/033 (DaThings).webm" type="video/webm">
+				</video>
 				<img class="napkins1 pos03" src="Images/Napkins/033 (DaThings).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain30.png" /><img class="background01" src="Images/Stain04.png" />
@@ -148,6 +241,9 @@
 				<img class="napkins1 pos05" src="Images/Napkins/035 (airshots22).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain30.png" /><img class="background01" src="Images/Stain06.png" /> 
+				<video class="pics2 vid06" preload="auto">
+					<source src="Video/036 (KOOPASANDWICH).webm" type="video/webm">
+				</video>
 				<img class="napkins2 pos06" src="Images/Napkins/036 (KOOPASANDWICH).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain30.png" /><img class="background01" src="Images/Stain07.png" /> 
@@ -175,9 +271,68 @@
 				<img class="napkins2 pos14" src="Images/Napkins/044a (Gambiy).png" />
 			</div>
 			<div class="slide"> <img class="background10" src="Images/Stain40.png" /><img class="background01" src="Images/Stain05.png" /> 
+				<video class="pics1 vid15" preload="auto">
+					<source src="Video/045 (GoldilocksAndTheBear).webm" type="video/webm">
+				</video>
 				<img class="napkins1 pos15" src="Images/Napkins/045 (GoldilocksAndTheBear).png" />
 			</div>
 		</div>
+		<div class="section">
+			<div class="slide"> Slide 1 </div>
+			<div class="slide"> <img class="background10" src="Images/Stain40.png" /><img class="background01" src="Images/Stain06.png" /> 
+				<video class="pics2 vid01" preload="auto">
+					<source src="Video/046 (RadCastle).webm" type="video/webm">
+				</video>
+				<img class="napkins2 pos01" src="Images/Napkins/046 (RadCastle).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain40.png" /><img class="background01" src="Images/Stain07.png" /> 
+				<video class="pics1 vid02" preload="auto">
+					<source src="Video/047 (MantaDeray).webm" type="video/webm">
+				</video>
+				<img class="napkins1 pos02" src="Images/Napkins/047 (MantaDeray).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain40.png" /><img class="background01" src="Images/Stain08.png" /> 
+				<img class="pics2 pic03" src="Images/Polaroids/018 (_____named).png" />
+				<img class="napkins2 pos03" src="Images/Napkins/048 (windyman56).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain40.png" /><img class="background01" src="Images/Stain09.png" /> 
+				<img class="pics1 pic04" src="Images/Polaroids/019 (DeeDeeMarie).png" />
+				<img class="napkins1 pos04" src="Images/Napkins/049 (TWEEnkie).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" />
+				<img class="pics2 pic05" src="Images/Polaroids/020 (KimmieSasumori).png" />
+				<img class="napkins2 pos05" src="Images/Napkins/050 (alleZSoyez).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain01.png" /> 
+				<img class="napkins1 pos06" src="Images/Napkins/051 (Corkscrew).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain02.png" /> 
+				<img class="napkins2 pos07" src="Images/Napkins/022 (CRYPTXcubed).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain03.png" /> 
+				<img class="napkins1 pos08" src="Images/Napkins/023 (ZappyOrpheus178).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain04.png" /> 
+				<img class="napkins2 pos09" src="Images/Napkins/024 (Flaretale52-Studios).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain05.png" /> 
+				<img class="napkins1 pos10" src="Images/Napkins/025 (PiplupDawnface54).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain06.png" /> 
+				<img class="napkins2 pos11" src="Images/Napkins/026 (Streah).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain07.png" /> 
+				<img class="napkins1 pos12" src="Images/Napkins/027 (RedRockBlueRock).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain08.png" />
+				<img class="napkins2 pos13" src="Images/Napkins/028 (PipeGuy64).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain50.png" /><img class="background01" src="Images/Stain09.png" /> 
+				<img class="napkins1 pos14" src="Images/Napkins/029 (PreownedOrchid0).png" />
+			</div>
+			<div class="slide"> <img class="background10" src="Images/Stain60.png" /> 
+				<img class="napkins2 pos15" src="Images/Napkins/030 (Clasiku).png" />
+			</div>
 		<div class="section">Some section</div>
 	</div>
 </body>
