@@ -65,6 +65,15 @@
 	left: 0;
 	z-index: 1;
 }
+.sectioncred {
+	position: absolute;
+	display: inline;
+	mix-blend-mode: multiply;
+	bottom: 0;
+	left: 43.75%;
+	z-index: 1;
+}
+
 
 @-webkit-keyframes steam {
 0% { top: 100px; opacity: .075; visibility: visible; }
