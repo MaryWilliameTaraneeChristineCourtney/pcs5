@@ -1,6 +1,11 @@
 @charset "utf-8";
 /* CSS Document */
 
+
+body {
+	background-image:url("background.jpg");
+	background-blend-mode: multiply;
+}
 .slide {
 	margin: 0;
 	padding: 0;
@@ -57,7 +62,7 @@
 	mix-blend-mode: screen;
 }
 
-.sectionvid {
+video.sectionvid {
 	position: absolute;
 	display: inline;
 	mix-blend-mode: multiply;
@@ -65,7 +70,7 @@
 	left: 0;
 	z-index: 1;
 }
-.sectioncred {
+video.sectioncred {
 	position: absolute;
 	display: inline;
 	mix-blend-mode: multiply;
@@ -74,50 +79,21 @@
 	z-index: 1;
 }
 
-
-@-webkit-keyframes steam {
-0% { top: 100px; opacity: .075; visibility: visible; }
-20% { top: 80px; opacity: 0.2; }
-40% { top: 60px; opacity: 0.4; }
-60% { top: 40px; opacity: 0.2; }
-80% { top: 20px; opacity: .075; }
-100% { top: 0px; opacity: 0; visibility: hidden; }
+.multiply {
+	mix-blend-mode: multiply;
+	position: absolute;
+	display: inline;
+	bottom: 0;
+	left: 0;
+	z-index: 1;
 }
-
-@-moz-keyframes steam {
-0% { top: 100px; opacity: .075; visibility: visible; }
-20% { top: 80px; opacity: 0.2; }
-40% { top: 60px; opacity: 0.4; }
-60% { top: 40px; opacity: 0.2; }
-80% { top: 20px; opacity: .075; }
-100% { top: 0px; opacity: 0; visibility: hidden; }
-}
-
-@-ms-keyframes steam {
-0% { top: 100px; opacity: .075; visibility: visible; }
-20% { top: 80px; opacity: 0.2; }
-40% { top: 60px; opacity: 0.4; }
-60% { top: 40px; opacity: 0.2; }
-80% { top: 20px; opacity: .075; }
-100% { top: 0px; opacity: 0; visibility: hidden; }
-}
-
-@-o-keyframes steam {
-0% { top: 100px; opacity: .075; visibility: visible; }
-20% { top: 80px; opacity: 0.2; }
-40% { top: 60px; opacity: 0.4; }
-60% { top: 40px; opacity: 0.2; }
-80% { top: 20px; opacity: .075; }
-100% { top: 0px; opacity: 0; visibility: hidden; }
-}
-
-@keyframes steam {
-0% { top: 100px; opacity: .075; visibility: visible; }
-20% { top: 80px; opacity: 0.2; }
-40% { top: 60px; opacity: 0.4; }
-60% { top: 40px; opacity: 0.2; }
-80% { top: 20px; opacity: .075; }
-100% { top: 0px; opacity: 0; visibility: hidden; }
+.multiplyagain {
+	mix-blend-mode: multiply;
+	position: absolute;
+	display: inline;
+	bottom: 0;
+	left: 50%;
+	z-index: 1;
 }
 
 .background01 {
@@ -125,7 +101,7 @@
 	float: left;
 	top: 0;
 	height: 100%;
-	mix-blend-mode: multiply;
+	mix-blend-mode: overlay;
 	z-index: 2;
 	text-align: center;
 	margin-left: .5%;
