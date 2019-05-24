@@ -148,6 +148,20 @@
 	height: 66%;
 	z-index: 7;
 }
+.napkins3 {
+	position: absolute;
+	float: left;
+	transform: rotate(0deg);
+	height: 66%;
+	z-index: 6;
+}
+.napkins4 {
+	position: absolute;
+	float: left;
+	transform: rotate(-5deg);
+	height: 66%;
+	z-index: 5;
+}
 .pos01 {
 	top: 10%;
 	left: 9%;
