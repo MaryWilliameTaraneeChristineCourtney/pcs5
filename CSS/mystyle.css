@@ -59,12 +59,10 @@
 
 .sectionvid {
 	position: absolute;
-	float: left;
+	display: inline;
+	mix-blend-mode: multiply;
 	bottom: 0;
-	width: 100%;
 	left: 0;
-	position: absolute;
-	float: left;
 	z-index: 1;
 }
 
