@@ -10,6 +10,10 @@ body {
 	margin: 0;
 	padding: 0;
 }
+.slide img {
+    position: absolute;
+	display: inline-block;
+}
 .background00 {
 	position: absolute;
 	float: left;
@@ -62,16 +66,6 @@ body {
 	mix-blend-mode: screen;
 }
 
-video.sectionvid {
-	position: absolute;
-	display: inline-block;
-	mix-blend-mode: multiply;
-	bottom: 0;
-	left: 0;
-    max-height: 20%;
-    width: auto;
-	z-index: 1;
-}
 video.sectioncred {
 	position: absolute;
 	display: inline;
@@ -81,24 +75,24 @@ video.sectioncred {
 	z-index: 1;
 }
 
-.multiply {
-	mix-blend-mode: multiply;
-	position: absolute;
+.keepme {
+    position: absolute;
 	display: inline-block;
+	mix-blend-mode: multiply;
 	bottom: 0;
 	left: 0;
-    max-height: 20%;
-    width: auto;
+    height: auto;
+    width: 100%;
 	z-index: 1;
 }
-.multiplyagain {
+.keepmeagain {
+    position: absolute;
+    display: inline-block;
 	mix-blend-mode: multiply;
-	position: absolute;
-	display: inline-block;
 	bottom: 0;
-	left: 50%;
-    max-width: 12.5%;
+    left: 50%;
     height: auto;
+    width: 6.25%;
 	z-index: 1;
 }
 
