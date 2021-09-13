@@ -68,8 +68,8 @@ video.sectionvid {
 	mix-blend-mode: multiply;
 	bottom: 0;
 	left: 0;
-    max-width: 12.5%;
-    height: auto;
+    max-height: 20%;
+    width: auto;
 	z-index: 1;
 }
 video.sectioncred {
@@ -87,8 +87,8 @@ video.sectioncred {
 	display: inline;
 	bottom: 0;
 	left: 0;
-    max-width: 12.5%;
-    height: auto;
+    max-height: 20%;
+    width: auto;
 	z-index: 1;
 }
 .multiplyagain {
