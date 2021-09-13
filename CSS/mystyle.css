@@ -64,7 +64,7 @@ body {
 
 video.sectionvid {
 	position: absolute;
-	display: inline;
+	display: inline-block;
 	mix-blend-mode: multiply;
 	bottom: 0;
 	left: 0;
@@ -84,7 +84,7 @@ video.sectioncred {
 .multiply {
 	mix-blend-mode: multiply;
 	position: absolute;
-	display: inline;
+	display: inline-block;
 	bottom: 0;
 	left: 0;
     max-height: 20%;
@@ -94,7 +94,7 @@ video.sectioncred {
 .multiplyagain {
 	mix-blend-mode: multiply;
 	position: absolute;
-	display: inline;
+	display: inline-block;
 	bottom: 0;
 	left: 50%;
     max-width: 12.5%;
